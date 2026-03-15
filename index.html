@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal Portfolio Website">
-  <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Website, Harsh Dubey, GitHub">
+  <meta name="description"
+    content="Harsh Dubey — Developer & Tech Enthusiast. Portfolio showcasing skills, projects, and experience.">
+  <meta name="keywords" content="Harsh Dubey, Portfolio, Developer, Python, JavaScript, React, Node.js, GitHub">
   <meta name="author" content="Harsh Dubey">
 
-  <title>Harsh Dubey</title>
+  <title>Harsh Dubey — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -19,78 +28,243 @@
 
 <body>
 
-  <!-- Matrix Background -->
-  <canvas class="matrix-bg" id="matrix"></canvas>
+  <!-- Particle Constellation Background -->
+  <canvas class="particles-bg" id="particles"></canvas>
 
-  <!-- Terminal UI -->
-  <div class="terminal">
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <img src="assets/icons/favicon.ico" alt="HD Logo" class="nav-logo-img">
+      <span class="nav-logo-text">Harsh Dubey</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-    <header>
-      <div class="terminal-prompt">$ whoami</div>
-      <h1>Harsh Dubey</h1>
-      <p>Full Stack Developer | Open Source Contributor | Linux Enthusiast</p>
-    </header>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">👋 Welcome to my corner of the internet</div>
+      <h1 class="hero-name">Hi, I'm <span class="highlight">Harsh Dubey</span></h1>
+      <p class="hero-tagline" id="heroTagline"></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="terminal-prompt">$ cat about.txt</div>
-      <p>
-        I build elegant solutions to complex problems using JavaScript and Python.
-        I am passionate about learning new technologies and contributing to open
-        source projects.
-      </p>
-    </section>
-
-    <section class="section">
-      <div class="terminal-prompt">$ ls projects/</div>
-
-      <div class="projects">
-        <div class="project">
-          <h3>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              E-Commerce Platform
-            </a>
-          </h3>
-          <p>
-            An innovative e-commerce web application designed to deliver a seamless
-            online shopping experience with secure authentication, product
-            management, and checkout functionality.
-          </p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript, Node.js</p>
-        </div>
-
-        <div class="project">
-          <h3>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              Portfolio Website
-            </a>
-          </h3>
-          <p>
-            A terminal-inspired personal portfolio showcasing projects, skills,
-            and contact information with a Matrix-style animated background.
-          </p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">01.</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-card fade-in">
+        <div class="about-card-glow"></div>
+        <div class="about-content">
+          <p>Hi! I'm <strong>Harsh Dubey</strong>, a passionate developer who loves building things that live on the
+            internet. I enjoy turning complex problems into clean, elegant solutions.</p>
+          <p>I'm driven by curiosity and a love for learning. Whether it's crafting a slick front-end, architecting
+            robust back-end systems, or diving into new technologies — I'm always up for a challenge.</p>
+          <p>When I'm not coding, you'll find me exploring open-source projects, reading tech blogs, or leveling up my
+            problem-solving skills.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="terminal-prompt">$ cat skills.txt</div>
-      <p><strong>Languages:</strong> Python, JavaScript, C, C++, Java</p>
-      <p><strong>Tools:</strong> Linux, Postman, Git</p>
-      <p><strong>Frameworks:</strong> React, Node.js</p>
-    </section>
+  <!-- ========== SKILLS ========== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">02.</span>
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
 
-    <section class="section">
-      <div class="terminal-prompt">$ ls contact/</div>
-      <p>
-        <a href="mailto:hddubey7727@gmail.com">Email</a> |
-        <a href="https://github.com/harshddubeyy" target="_blank" rel="noopener noreferrer">GitHub</a> |
-        <a href="https://www.linkedin.com/in/hddubey" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </p>
-    </section>
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon">⚡</div>
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+          </div>
+        </div>
 
-  </div>
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon">🧩</div>
+          <h3 class="skill-category-title">Frameworks & Libraries</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon">🛠️</div>
+          <h3 class="skill-category-title">Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">03.</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card fade-in">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <span class="folder-icon">📁</span>
+            <div class="project-links">
+              <a href="https://github.com/harshddubeyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-desc">A stunning personal portfolio with animated particle background, built with vanilla
+            HTML, CSS, and JavaScript.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <span class="folder-icon">📁</span>
+            <div class="project-links">
+              <a href="https://github.com/harshddubeyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Two</h3>
+          <p class="project-desc">Replace this with your second project description. Add details about what it does and
+            the tech you used.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Flask</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <span class="folder-icon">📁</span>
+            <div class="project-links">
+              <a href="https://github.com/harshddubeyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Three</h3>
+          <p class="project-desc">Replace this with your third project description. Showcase something you're proud of
+            building.</p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-number">04.</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-wrapper fade-in">
+        <p class="contact-text">Got a project idea, a question, or just want to say hi? My inbox is always open.</p>
+        <div class="contact-links">
+          <a href="mailto:hddubey7727@gmail.com" class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span class="contact-label">hddubey7727@gmail.com</span>
+          </a>
+          <a href="https://github.com/harshddubeyy" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon">💻</span>
+            <span class="contact-label">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/hddubey" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <span class="contact-label">LinkedIn</span>
+          </a>
+        </div>
+        <a href="mailto:hddubey7727@gmail.com" class="btn btn-primary contact-cta">
+          <span>Say Hello</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>Designed & Built by <strong>Harsh Dubey</strong></p>
+    <p class="footer-note">&lt;code/&gt;</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
+
 </html>

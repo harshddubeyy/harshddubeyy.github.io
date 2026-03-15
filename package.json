@@ -1,0 +1,10 @@
+{
+  "name": "harsh-dubey-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Harsh Dubey",
+  "scripts": {
+    "start": "npx -y http-server . -p 8080 -c-1 -o"
+  },
+  "author": "Harsh Dubey",
+  "license": "MIT"
+}
